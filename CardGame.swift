@@ -3,8 +3,7 @@
  *  Since: May 30, 2021
  *  Version: 1.0
  *  Synopsis: Card Game vs CPU: based on RNG.
- *  ContentView.swift
- *  CardGame
+ *  CardGame ContentView
  */
 import SwiftUI
 
