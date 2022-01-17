@@ -4,9 +4,8 @@
  *  Version: 1.0
  *  Synopsis: Card Game vs CPU: based on RNG.
  *  ContentView.swift
- *  WarCardGame
+ *  CardGame
  */
-
 import SwiftUI
 
 struct ContentView: View {
@@ -24,7 +23,7 @@ struct ContentView: View {
                 Spacer()
                 Image("logo")
                 Spacer()
-                //Displays the Player and CPU's card (initially).
+                // Displays the Player and CPU's card (initially).
                 HStack{
                     Spacer()
                     Image(playerCard)
@@ -33,7 +32,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 Spacer()
-                //Creating an action for the button - occurrs everytime it's clicked.
+                / /Creating an action for the button - occurrs everytime it's clicked.
                 Button(action: {
                     //Generate a random number from 2-14
                     let playerRand = Int.random(in: 2...14)
@@ -47,7 +46,7 @@ struct ContentView: View {
                     }else if cpuRand > playerRand {
                         cpuScore += 1
                     }
-                    //Giving the button an image
+                    // Giving the button an image
                 }, label: {
                     Image("dealbutton")
                 })
@@ -60,9 +59,9 @@ struct ContentView: View {
                         Text("Player").font(.headline).foregroundColor(Color.black).padding(.bottom, 10.0)
                         Text(String(playerScore)).font(.largeTitle).foregroundColor(Color.black)
                     }
-                    //Evenly/Neatly space out player vs CPU info (works on all iPhone generations)
+                    // Evenly/Neatly space out player vs CPU info (works on all iPhone generations)
                     Spacer()
-                    //Places CPU info vertically
+                    // Places CPU info vertically
                     VStack{
                         Text("CPU").font(.headline).foregroundColor(Color.black).padding(.bottom, 10.0)
                         Text(String(cpuScore)).font(.largeTitle).foregroundColor(Color.black)
